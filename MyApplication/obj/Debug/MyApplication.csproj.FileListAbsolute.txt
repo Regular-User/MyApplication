@@ -10,3 +10,15 @@ C:\Users\Sigma-S\Desktop\myproject\MyApplication\MyApplication\obj\Debug\MyAppli
 C:\Users\Sigma-S\Desktop\myproject\MyApplication\MyApplication\obj\Debug\MyApplication.MainWindow.resources
 C:\Users\Sigma-S\Desktop\myproject\MyApplication\MyApplication\obj\Debug\MyApplication.StartWindow.resources
 C:\Users\Sigma-S\Desktop\myproject\MyApplication\MyApplication\obj\Debug\MyApplication.Sort_Vstav.resources
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\bin\Debug\MyApplication.exe.config
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\bin\Debug\MyApplication.exe
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\bin\Debug\MyApplication.pdb
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.csprojAssemblyReference.cache
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.MainWindow.resources
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.Sort_Vstav.resources
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.StartWindow.resources
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.Properties.Resources.resources
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.csproj.GenerateResource.cache
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.csproj.CoreCompileInputs.cache
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.exe
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.pdb

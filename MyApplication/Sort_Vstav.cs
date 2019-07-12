@@ -13,8 +13,9 @@ namespace MyApplication
     public partial class Sort_Vstav : Form
     {
         public Sort_Vstav()
-        {
-            InitializeComponent();
+        {           
+            InitializeComponent();     
+            
         }
 
         int[] mas;
@@ -41,24 +42,62 @@ namespace MyApplication
             }
         }
 
+
+
+        private void Sort_Vstav_Load(object sender, EventArgs e)
+        {
+            button2.Enabled = false;
+        }
+
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            button2.Enabled = false;
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            richTextBox1.Text = "";
+            richTextBox2.Text = "";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form mw = new MainWindow();
+            mw.Show();
+            this.Close();
+
+        }
+
         Random r = new Random();
 
         private void button1_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = "";
-            richTextBox2.Text = "";
-            left = Convert.ToInt32(textBox2.Text);
-            right = Convert.ToInt32(textBox3.Text);
-            razm = Convert.ToInt32(textBox1.Text);
-            mas = new int[razm];
-
-            for (int i = 0; i < mas.Length; i++)
+            if (richTextBox1 != null)
             {
-                mas[i] = r.Next(left, right);
-                richTextBox1.Text += mas[i].ToString() + ", ";
+                button2.Enabled = true;
             }
+            if (textBox1.Text == "" && textBox2.Text == "" && textBox3.Text == "")
+            {
+                MessageBox.Show("Введите значения");
+            }
+            else
+            {
+                richTextBox1.Text = "";
+                richTextBox2.Text = "";
+                left = Convert.ToInt32(textBox2.Text);
+                right = Convert.ToInt32(textBox3.Text);
+                razm = Convert.ToInt32(textBox1.Text);
+                mas = new int[razm];
+
+                for (int i = 0; i < mas.Length; i++)
+                {
+                    mas[i] = r.Next(left, right);
+                    richTextBox1.Text += mas[i].ToString() + ", ";
+                }
+            }
+            
 
 
-        }
+        } 
     }
 }
