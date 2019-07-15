@@ -12,15 +12,27 @@ namespace MyApplication
 {
     public partial class MainWindow : Form
     {
+        
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();              
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
+            Form mw = new MainWindow();
             Form sort = new Sort_Vstav();
             sort.Show();
+            mw.Close();
+            this.Hide();
+        }
+        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form runbut = new RunButton();
+            Form mw = new MainWindow();
+            runbut.Show();
+            mw.Close();
             this.Hide();
         }
 

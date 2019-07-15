@@ -23,6 +23,7 @@ namespace MyApplication
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button2.Enabled = false;
             richTextBox2.Text = "";
             for(int i = 1; i < mas.Length; i++)
             {
@@ -71,17 +72,15 @@ namespace MyApplication
         Random r = new Random();
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            if (richTextBox1 != null)
-            {
-                button2.Enabled = true;
-            }
+        {       
             if (textBox1.Text == "" && textBox2.Text == "" && textBox3.Text == "")
             {
                 MessageBox.Show("Введите значения");
+                
             }
             else
             {
+                button2.Enabled = true;
                 richTextBox1.Text = "";
                 richTextBox2.Text = "";
                 left = Convert.ToInt32(textBox2.Text);
