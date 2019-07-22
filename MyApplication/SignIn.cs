@@ -60,7 +60,6 @@ namespace MyApplication
                 else if (strok.Length != 0)
                 {
                     int numl = 0; //Нумерация строк
-                    bool While = true;
                     string llogin = textBox1.Text; 
                     StreamReader search_login = new StreamReader("Users/Login.txt");
                     while (!search_login.EndOfStream)
@@ -75,7 +74,7 @@ namespace MyApplication
                         {
                             while(search_login.EndOfStream)
                             {
-                                if(search_login.ReadLine() == null && search_login.ReadLine() != llogin)
+                                if(search_login.ReadLine() != llogin)
                                 {
                                     search_login.Close();
                                     using(StreamWriter login = new StreamWriter("Users/Login.txt", true))
@@ -86,17 +85,16 @@ namespace MyApplication
                                     {
                                         password.WriteLine(textBox2.Text);
                                     }
-                                    While = false;
                                     Form st = new StartWindow();
                                     st.Activate();
                                     this.Close();
-                                    break;
+                                    goto Finish;
                                 }
                             }
                         }
                         numl++;
                     }
-                    
+                    Finish:
                     search_login.Close();
                 }
             }
