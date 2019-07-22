@@ -25,3 +25,4 @@ C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyA
 C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.RunButton.resources
 C:\Users\Sigma-S\Desktop\myproject\MyApplication\MyApplication\obj\Debug\MyApplication.Form1.resources
 C:\Users\Sigma-S\Desktop\myproject\MyApplication\MyApplication\obj\Debug\MyApplication.RunButton.resources
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.SignIn.resources
