@@ -29,60 +29,50 @@ namespace MyApplication
            
             int numl = 1, nump = 1;
             string login = textBox3.Text, password = textBox4.Text;
-            StreamReader search_login = new StreamReader("Users/Login.txt");
-            StreamReader search_password = new StreamReader("Users/Password.txt");
+            StreamReader search_login, search_password;
 
-
-
-            while (!search_login.EndOfStream)
+            if (login == "" || password == "")
             {
-                if(search_login.ReadLine() == login)
-                {
-                    while (!search_password.EndOfStream)
-                    {
-                        if (search_password.ReadLine() == password)
-                        {
-                            if (nump == numl)
-                            {
-                                Form mw = new MainWindow();
-                                mw.Show();
-                                this.Hide();
-                                MessageBox.Show("Вы вошли");
-                            }
-                        }
-                        else if(textBox4.Text == "")
-                        {
-                            label1.ForeColor = Color.Red;
-                            label1.Text = "Введите пароль.";
-                        }
-                        else
-                        {
-                            label1.ForeColor = Color.Red;
-                            label1.Text = "Неверный логин или пароль";
-                        }
-                        nump++;
-                    }
-                    break;
-                }
-                else if (textBox3.Text == "" && textBox4.Text == "")
-                {
-                    label1.ForeColor = Color.Red;
-                    label1.Text = "Введите логин и пароль.";
-                }
-                else if(textBox3.Text == "")
-                {
-                    label1.ForeColor = Color.Red;
-                    label1.Text = "Введите логин.";
-                }
-                else 
-                {
-                    label1.ForeColor = Color.Red;
-                    label1.Text = "Такого пользователя не существует";
-                }
-                numl++;
+                label1.ForeColor = Color.Red;
+                label1.Text = "Поля не должны быть пустыми";
             }
-            search_login.Close();
-            search_password.Close();
+            else
+            {
+                search_login = new StreamReader("Users/Login.txt");
+                search_password = new StreamReader("Users/Password.txt");
+                while (!search_login.EndOfStream)
+                {
+                    if (search_login.ReadLine() == login) 
+                    {
+                        while (!search_password.EndOfStream)
+                        {
+                            if (search_password.ReadLine() == password)
+                            {
+                                if (nump == numl)
+                                {
+                                    Form mw = new MainWindow();
+                                    mw.Show();
+                                    this.Hide();
+                                    MessageBox.Show("Вы вошли");
+                                    break;
+                                }
+                                else
+                                {
+                                    label1.ForeColor = Color.Red;
+                                    label1.Text = "Неверный логин или пароль";
+                                    break;
+                                }
+                            }
+                            
+                            nump++;
+                        }
+                        break;
+                    }
+                    numl++;
+                }
+                search_login.Close();
+                search_password.Close();
+            }
         }
     
         private void button3_Click(object sender, EventArgs e)
@@ -90,7 +80,13 @@ namespace MyApplication
         {
             Form sn = new SignIn();
             sn.Show();
-            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form Str = new String();
+            Str.Show();
+            this.Hide();
         }
     }
 }

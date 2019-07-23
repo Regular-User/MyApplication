@@ -36,5 +36,12 @@ namespace MyApplication
             this.Hide();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form Str = new String();
+            Str.Hide();
+            this.Close();
+
+        }
     }
 }

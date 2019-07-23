@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// Регистрация
+
 namespace MyApplication
 {
     public partial class SignIn : Form
@@ -21,23 +23,12 @@ namespace MyApplication
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (textBox1.Text == "" && textBox2.Text == "")
+            if (textBox1.Text == "" || textBox2.Text == "")
             {
                 label3.ForeColor = Color.Red;
-                label3.Text = "Пустые поля";
-
+                label3.Text = "Все поля должны быть заполнены";
             }
-            else if (textBox1.Text == "")
-            {
-                label3.ForeColor = Color.Red;
-                label3.Text = "Введите логин";
-            }
-            else if (textBox2.Text == "")
-            {
-                label3.ForeColor = Color.Red;
-                label3.Text = "Введите пароль";
-            }
-            else if(textBox2.Text != textBox3.Text)
+            else if (textBox2.Text != textBox3.Text)
             {
                 label3.ForeColor = Color.Red;
                 label3.Text = "Пароли не совпадают";
@@ -57,10 +48,38 @@ namespace MyApplication
                     }
                     this.Close();
                 }
-                else if (strok.Length != 0)
+                else
                 {
-                    int numl = 0; //Нумерация строк
-                    string llogin = textBox1.Text; 
+                    string llogin = textBox1.Text;
+                    bool IsHave = false;
+                    for (int i = 0; i < strok.Length; i++)
+                    {
+                        if (strok[i] == llogin)
+                        {
+                            label3.ForeColor = Color.Red;
+                            label3.Text = "Логин занят";
+                            IsHave = true;
+                            break;
+                        }
+                    }
+                    if (!IsHave)
+                    {
+
+                        using (StreamWriter login = new StreamWriter("Users/Login.txt", true))
+                        {
+                            login.WriteLine(textBox1.Text);
+                        }
+                        using (StreamWriter password = new StreamWriter("Users/Password.txt", true))
+                        {
+                            password.WriteLine(textBox2.Text);
+                        }
+                        Form st = new StartWindow();
+                        st.Activate();
+                        this.Close();
+                    }
+                    /*
+                    string llogin = textBox1.Text;
+                    bool IsHave = false;
                     StreamReader search_login = new StreamReader("Users/Login.txt");
                     while (!search_login.EndOfStream)
                     {
@@ -68,37 +87,32 @@ namespace MyApplication
                         {
                             label3.ForeColor = Color.Red;
                             label3.Text = "Логин занят";
+                            IsHave = true;
+                            search_login.Close();
                             break;
                         }
-                        else if (search_login.ReadLine() != llogin)
-                        {
-                            while(search_login.EndOfStream)
-                            {
-                                if(search_login.ReadLine() != llogin)
-                                {
-                                    search_login.Close();
-                                    using(StreamWriter login = new StreamWriter("Users/Login.txt", true))
-                                    {
-                                        login.WriteLine(textBox1.Text);
-                                    }
-                                    using(StreamWriter password = new StreamWriter("Users/Password.txt", true))
-                                    {
-                                        password.WriteLine(textBox2.Text);
-                                    }
-                                    Form st = new StartWindow();
-                                    st.Activate();
-                                    this.Close();
-                                    goto Finish;
-                                }
-                            }
-                        }
-                        numl++;
                     }
-                    Finish:
                     search_login.Close();
+                    if (!IsHave)
+                    {
+
+                        using (StreamWriter login = new StreamWriter("Users/Login.txt", true))
+                        {
+                            login.WriteLine(textBox1.Text);
+                        }
+                        using (StreamWriter password = new StreamWriter("Users/Password.txt", true))
+                        {
+                            password.WriteLine(textBox2.Text);
+                        }
+                        Form st = new StartWindow();
+                        st.Activate();
+                        this.Close();
+                    }
+                    */
                 }
             }
         }
+
 
         //Скрыть/показать пароль
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
