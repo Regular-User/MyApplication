@@ -53,7 +53,6 @@ namespace MyApplication
                                     Form mw = new MainWindow();
                                     mw.Show();
                                     this.Hide();
-                                    MessageBox.Show("Вы вошли");
                                     break;
                                 }
                                 else
@@ -86,6 +85,13 @@ namespace MyApplication
         {
             Form Str = new String();
             Str.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form mw = new MainWindow();
+            mw.Show();
             this.Hide();
         }
     }
