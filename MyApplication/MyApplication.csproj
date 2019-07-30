@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game.Designer.cs">
+      <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
     <Compile Include="RunButton.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <Compile Include="String.Designer.cs">
       <DependentUpon>String.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +116,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="String.resx">
       <DependentUpon>String.cs</DependentUpon>
@@ -123,6 +133,69 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\run\skeleton-run_20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

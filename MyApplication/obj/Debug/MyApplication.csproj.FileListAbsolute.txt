@@ -27,3 +27,5 @@ C:\Users\Sigma-S\Desktop\myproject\MyApplication\MyApplication\obj\Debug\MyAppli
 C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.SignIn.resources
 C:\Users\Sigma-S\Desktop\myproject\MyApplication\MyApplication\obj\Debug\MyApplication.SignIn.resources
 C:\Users\Sigma-S\Desktop\myproject\MyApplication\MyApplication\obj\Debug\MyApplication.String.resources
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.String.resources
+C:\Users\Regular_User\Documents\GitHub\MyApplication\MyApplication\obj\Debug\MyApplication.Game.resources
